@@ -147,6 +147,13 @@ function check_product()
         echo "Couldn't locate the top of the tree.  Try setting TOP." >&2
         return
     fi
+    if (echo -n $1 | grep -q -e "^corvus_") ; then
+        CORVUS_BUILD=$(echo -n $1 | sed -e 's/^corvus_//g')
+    else
+        CORVUS_BUILD=
+    fi
+    export CORVUS_BUILD
+
         TARGET_PRODUCT=$1 \
         TARGET_BUILD_VARIANT= \
         TARGET_BUILD_TYPE= \
@@ -699,6 +706,7 @@ function lunch()
     TARGET_PRODUCT=$product
     TARGET_BUILD_VARIANT=$variant
     TARGET_PLATFORM_VERSION=$version
+    check_product $product
     build_build_var_cache
 
     if [ $? -ne 0 ]
