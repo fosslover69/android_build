@@ -827,6 +827,8 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   build_date = target_info.GetBuildProp("ro.corvus.build.date")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
   device = target_info.GetBuildProp("ro.corvus.device")
+  build_type = target_info.GetBuildProp("ro.corvus.build.type")
+  corvus_version = target_info.GetBuildProp("ro.corvus.build.version")
   script.Print("----------------------------------------------");
   script.Print("    _____ ____  _______      ___    _  _____  ");
   script.Print("   / ____/ __ \|  __ \ \    / / |  | |/ ____| ");
@@ -835,14 +837,15 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print("  | |___| |__| | | \ \  \  /  | |__| |____) | ");
   script.Print("   \_____\____/|_|  \_\  \/    \____/|_____/  ");
   script.Print("                                              ");
-  script.Print("    by Ritzz, DeadmanxXD, Jughead, Zeeshan,   ");
-  script.Print("              Victor & Trishiraj              ");
+  script.Print("                 by Corvus Team               ");
   script.Print("----------------------------------------------");
+  script.Print(" Device: %s"%(device));
   script.Print(" Android version: %s"%(android_version));
+  script.Print(" Corvus version: %s"%(corvus_version));
   script.Print(" Build id: %s"%(build_id));
   script.Print(" Build date: %s"%(build_date));
+  script.Print(" Build type: %s"%(build_type));
   script.Print(" Security Patch: %s"%(security_patch));
-  script.Print(" Device: %s"%(device));
   script.Print("----------------------------------------------");
   script.AppendExtra("ifelse(is_mounted(\"/system\"), unmount(\"/system\"));")
   device_specific.FullOTA_InstallBegin()
