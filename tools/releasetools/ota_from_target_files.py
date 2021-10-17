@@ -829,16 +829,17 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   device = target_info.GetBuildProp("ro.corvus.device")
   build_type = target_info.GetBuildProp("ro.corvus.build.type")
   corvus_version = target_info.GetBuildProp("ro.corvus.build.version")
-  script.Print("----------------------------------------------");
-  script.Print("    _____ ____  _______      ___    _  _____  ");
-  script.Print("   / ____/ __ \|  __ \ \    / / |  | |/ ____| ");
-  script.Print("  | |   | |  | | |__) \ \  / /| |  | | (___   ");
-  script.Print("  | |   | |  | |  _  / \ \/ / | |  | |\___ \  ");
-  script.Print("  | |___| |__| | | \ \  \  /  | |__| |____) | ");
-  script.Print("   \_____\____/|_|  \_\  \/    \____/|_____/  ");
-  script.Print("                                              ");
-  script.Print("                 by Corvus Team               ");
-  script.Print("----------------------------------------------");
+  script.Print("----------------------------------------------------");
+  script.Print(" **////**                                           ");
+  script.Print(" **    //   ******  ****** **    ** **   **  ****** ");
+  script.Print(" /**        **////**//**//*/**   /**/**  /** **//// ");
+  script.Print(" /**       /**   /** /** / //** /** /**  /**//***** ");
+  script.Print(" //**    **/**   /** /**    //****  /**  /** /////**");
+  script.Print("  //****** //****** /***     //**   //****** ****** ");
+  script.Print("   //////   //////  ///       //     ////// //////  ");
+  script.Print("                                                    ");
+  script.Print("    || Customisation || Stability || Performance || ");
+  script.Print("----------------------------------------------------");
   script.Print(" Device: %s"%(device));
   script.Print(" Android version: %s"%(android_version));
   script.Print(" Corvus version: %s"%(corvus_version));
