@@ -227,6 +227,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   device = target_info.GetBuildProp("ro.corvus.device")
   build_type = target_info.GetBuildProp("ro.corvus.build.type")
   corvus_version = target_info.GetBuildProp("ro.corvus.build.version")
+  corvus_codename = target_info.GetBuildProp("ro.corvus.codename")
   script.Print("----------------------------------------------------");
   script.Print(" **////**                                           ");
   script.Print(" **    //   ******  ****** **    ** **   **  ****** ");
@@ -241,6 +242,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print(" Device           : %s"%(device));
   script.Print(" Android version  : %s"%(android_version));
   script.Print(" Corvus version   : %s"%(corvus_version));
+  script.Print(" Corvus Codename  : %s"%(corvus_codename));
   script.Print(" Build id         : %s"%(build_id));
   script.Print(" Build date       : %s"%(build_date));
   script.Print(" Build type       : %s"%(build_type));
